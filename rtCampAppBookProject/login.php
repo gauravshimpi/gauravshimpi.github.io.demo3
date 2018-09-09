@@ -9,7 +9,11 @@
   ]);
 
 $helper = $fb->getRedirectLoginHelper();
-
+if(!isset($helper))
+{
+	echo "Not redirected properly...";
+	exit;
+}
 $permissions = ['email','user_photos']; // Optional permissions
 $loginUrl = $helper->getLoginUrl('https://rtcampproject.herokuapp.com/rtCampAppBookProject/fbcallback.php', $permissions);
 
