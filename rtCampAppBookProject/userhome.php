@@ -22,14 +22,14 @@ require_once 'Facebook/FacebookRequest.php';
     getCredentials($_GET['code'], $authUrl);
     $userName = $_SESSION["userInfo"]["name"];
     $userEmail = $_SESSION["userInfo"]["email"];
-    header('Location: https://localhost/rtCampAppBookProject/userhome.php?code='.$_GET['code']);
+    header('Location: https://rtcampproject.herokuapp.com/rtCampAppBookProject/userhome.php?code='.$_GET['code']);
   }
 
     use Facebook\FacebookRequest;
     //session_start();
     $fb = new Facebook\Facebook([
-  'app_id' => '2077887022527500',
-  'app_secret' => '9402dbf757496530274eed01218fb452',
+  'app_id' => '2234494873436555',
+  'app_secret' => 'a17c0bc50acf260027b6736848177ca5',
   'default_graph_version' => 'v2.2',
   ]);
 
@@ -51,8 +51,8 @@ if(isset($_SESSION['fb_access_token'])){
     $access_token = $_SESSION['fb_access_token'];
 }else{
     // Facebook app id & app secret 
-    $appId = '2077887022527500'; 
-    $appSecret = '9402dbf757496530274eed01218fb452';
+    $appId = '2234494873436555'; 
+    $appSecret = 'a17c0bc50acf260027b6736848177ca5';
     
     // Generate access token
     $graphActLink = "https://graph.facebook.com/oauth/access_token?client_id={$appId}&client_secret={$appSecret}&grant_type=client_credentials";
