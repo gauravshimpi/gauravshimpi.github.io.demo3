@@ -9,7 +9,7 @@
   'app_secret' => 'a17c0bc50acf260027b6736848177ca5',
   'default_graph_version' => 'v2.2',
   ]);
-  
+
 $helper = $fb->getRedirectLoginHelper();
 //$helper = $fb->getRedirectLoginHelper();
 if (isset($_GET['state'])) {
@@ -24,6 +24,7 @@ try {
 } catch(Facebook\Exceptions\FacebookSDKException $e) {
   // When validation fails or other local issues
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
+  
   exit;
 }
 
