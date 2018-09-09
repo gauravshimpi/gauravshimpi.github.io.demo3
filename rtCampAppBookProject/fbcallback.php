@@ -9,6 +9,8 @@
   'app_secret' => '9402dbf757496530274eed01218fb452',
   'default_graph_version' => 'v2.2',
   ]);
+  var_dump($fb);
+  die();
 
 $helper = $fb->getRedirectLoginHelper();
 //$helper = $fb->getRedirectLoginHelper();
@@ -44,7 +46,7 @@ if (! isset($accessToken)) {
 // Logged in
 echo '<h3>Access Token</h3>';
 var_dump($accessToken->getValue());
-die();
+
 // The OAuth 2.0 client handler helps us manage access tokens
 $oAuth2Client = $fb->getOAuth2Client();
 
