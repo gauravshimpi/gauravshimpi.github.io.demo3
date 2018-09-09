@@ -11,6 +11,6 @@
 $helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['email','user_photos']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('http://rtcampproject.herokuapp.com/rtCampAppBookProject/fbcallback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://rtcampproject.herokuapp.com/rtCampAppBookProject/fbcallback.php', $permissions);
 
 ?>
