@@ -44,7 +44,7 @@ if (! isset($accessToken)) {
 // Logged in
 echo '<h3>Access Token</h3>';
 var_dump($accessToken->getValue());
-
+die();
 // The OAuth 2.0 client handler helps us manage access tokens
 $oAuth2Client = $fb->getOAuth2Client();
 
