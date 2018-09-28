@@ -46,7 +46,6 @@ $fbPhotoData = $fbPhotoObj['data'];
 			}
 
 	</style>
-    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lightGallery.css" />
 </head>
 <body style="background-color: #f5f5f5;overflow: hidden;">
     <div class="row" style="padding: 1em;background-color: #3b5998;margin: 0;">
@@ -57,7 +56,7 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-	<div class="lightgallery">
+	<div class="carousel">
     <!-- <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a> -->
     <?php 
     		foreach($fbPhotoData as $data){
@@ -68,35 +67,16 @@ $fbPhotoData = $fbPhotoObj['data'];
             //echo $imgSource;
             $name = isset($data['name'])?$data['name']:'';
             
-            echo "<a href="{$imgSource}"><img src="{$imgSource}" /></a>";
             //echo "<div class='fb-album'>";
-            /*echo "<a class='carousel-item position' href='#!' style='top: -100px;'>
+            echo "<a class='carousel-item position' href='#!' style='top: -100px;'>
             	<img src='{$imgSource}' class='size'  alt=''>
             </a>";
-            */
             //echo "<h3>{$name}</h3>";
             //echo "</div>";
         }
     ?>
   	</div>
-    <!-- jQuery version must be >= 1.8.0; -->
-    <script src="jquery.min.js"></script>
-
-    <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-
-    <script src="lightGallery-master/dist/js/lightgallery.min.js"></script>
-
-    <!-- lightgallery plugins -->
-    <script src="lightGallery-master/dist/js/lg-thumbnail.min.js"></script>
-    <script src="lightGallery-master/dist/js/lg-fullscreen.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $("#lightgallery").lightGallery(); 
-    });
-    </script>
-  	<!--
-    <script src="assets/js/jquery-2.1.3.min.js"></script>
+  	<script src="assets/js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="assets/materialize/js/materialize.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -104,6 +84,5 @@ $fbPhotoData = $fbPhotoObj['data'];
     	});
         
 	</script>
-    -->
 </body>
 </html>
