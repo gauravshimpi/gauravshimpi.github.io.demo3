@@ -411,7 +411,7 @@ $fbAlbumData = $fbAlbumObj['data'];
 
                 //Download All Albums 
                 $("#btndownloadall").click(function(){
-                  $("#preloader").show();
+                  //$("#preloader").show();
                   var username = $("#username").text().trim();
                   var albumarray = [];
                     
