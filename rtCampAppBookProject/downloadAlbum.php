@@ -61,7 +61,7 @@ while(count($fbPhotoData['data']) > 0)
         
 
         // Get photos of Facebook page album using Facebook Graph API URL 
-        $graphPhoLink = "https://graph.facebook.com/v2.9/{$albumid}/photos?fields=source,images,name&access_token={$access_token}&limit=100&offset={$offset}";
+        $graphPhoLink = "https://graph.facebook.com/v2.9/".$albumid."/photos?fields=source,images,name&access_token=".$access_token."&limit=100&offset=".$offset;
         //echo $graphPhoLink;
 
         $jsonData = file_get_contents($graphPhoLink);
