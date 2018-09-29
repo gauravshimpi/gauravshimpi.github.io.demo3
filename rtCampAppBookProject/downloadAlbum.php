@@ -38,7 +38,7 @@ $fbPhotoData = $fbPhotoObj['data'];
 //array for storing urls of images in the album
 $images = array();
 $name = "";
-while($fbPhotoObj['data']>0)
+while(isset($fbPhotoObj['next']))
 {
     foreach($fbPhotoData as $data){
         //echo "1";
