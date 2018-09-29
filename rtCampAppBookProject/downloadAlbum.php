@@ -58,7 +58,7 @@ $jsonData = file_get_contents($graphPhoLink);
 $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
 print_r($fbPhotoObj);
 die();
-
+...
 // Facebook photos content
 $fbPhotoData = $fbPhotoObj['data'];
 //echo $fbPhotoData;
