@@ -22,51 +22,19 @@ if(isset($_POST['albumid']) && isset($_POST['albumname']) && isset($_REQUEST['us
 // Get access token from session
 $access_token = $_SESSION['fb_access_token'];
 
-
-//new Started
-    
-
-$album_photos = datafromfacebook ( '/' . $album_id . '/photos?fields=source&limit=100' );
-    $album_directory = $album_download_directory . $album_name;
-    if (! file_exists ( $album_directory )) {
-        mkdir ( $album_directory, 0777 );
-    }
-    $i = 1;
-    $offset=0;
-    while(count($album_photos ['data']) > 0)
-    {
-        foreach ( $album_photos ['data'] as $album_photo ) {
-            $album_photo = ( array ) $album_photo;
-            file_put_contents ( $album_directory . '/' . $i . ".jpg", fopen ( $album_photo ['source'], 'r' ) );
-            $i ++;
-        }
-        $offset+=100;
-        $album_photos = datafromfacebook ( '/' . $album_id . '/photos?fields=source&limit=100&offset='.$offset);
-    }
-//new End
-
-
-
-
 // Get photos of Facebook page album using Facebook Graph API URL 
-$graphPhoLink = "https://graph.facebook.com/v2.9/{$albumid}/photos?fields=source,images,name&access_token={$access_token}&limit=100";
+$graphPhoLink = "https://graph.facebook.com/v2.9/{$albumid}/photos?fields=source,images,name&access_token={$access_token}&limit=500";
 //echo $graphPhoLink;
 
 $jsonData = file_get_contents($graphPhoLink);
 //echo $jsonData; 
-
 $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
-print_r($fbPhotoObj);
-die();
-...
+
 // Facebook photos content
 $fbPhotoData = $fbPhotoObj['data'];
 //echo $fbPhotoData;
 //var_dump($fbPhotoData);
 
-$i=1;
-$offset=0;
-while(count($fbPhotoData))
 //array for storing urls of images in the album
 $images = array();
 $name = "";

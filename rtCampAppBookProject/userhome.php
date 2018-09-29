@@ -411,7 +411,7 @@ $fbAlbumData = $fbAlbumObj['data'];
 
                 //Download All Albums 
                 $("#btndownloadall").click(function(){
-                  //$("#preloader").show();
+                  $("#preloader").show();
                   var username = $("#username").text().trim();
                   var albumarray = [];
                     
@@ -430,8 +430,7 @@ $fbAlbumData = $fbAlbumObj['data'];
                       albumid.push(albumdetails[0]);
                       albumname.push(albumdetails[1]);
                     }
-                    $name = "https://graph.facebook.com/v2.9/"+$albumid+"/photos?fields=source,images,name&access_token="+$access_token+"&limit=500";
-                    alert($name);
+
                     $.ajax({
                         type: "POST",
                         url: "downloadmultiplealbum.php",
