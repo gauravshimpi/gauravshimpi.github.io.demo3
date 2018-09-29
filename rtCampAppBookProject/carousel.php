@@ -58,7 +58,6 @@ $fbPhotoData = $fbPhotoObj['data'];
     </div>
 	<div class="carousel">
     <!-- <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a> -->
-    <img src="dnfk" alt="not dfound">
     <?php 
     		foreach($fbPhotoData as $data){
             //echo "1";
