@@ -35,47 +35,6 @@ $fbPhotoData = $fbPhotoObj['data'];
 //echo $fbPhotoData;
 //var_dump($fbPhotoData);
 
-//start new code
-$offset=0;
-$images = array();
-$name = "";
-while(count($fbPhotoData['data']) > 0)
-    {
-        foreach($fbPhotoData as $data){
-        //echo "1";
-        $imageData = end($data['images']);
-        //echo $imageData;
-        $imgSource = isset($imageData['source'])?$imageData['source']:'';
-        //echo $imgSource ."<br>";
-        
-        //extract only the url
-        //$imageUrl = substr($imgSource, 0, strpos($imgSource, "?"));
-        
-        //$images[] = $imageUrl;
-        $images[] = $imgSource;
-        $name = isset($data['name'])?$data['name']:'';
-        echo $name;
-        }
-
-        $offset+=100;
-        
-
-        // Get photos of Facebook page album using Facebook Graph API URL 
-        $graphPhoLink = "https://graph.facebook.com/v2.9/".$albumid."/photos?fields=source,images,name&access_token=".$access_token."&limit=0&offset=".$offset;
-        //echo $graphPhoLink;
-
-        $jsonData = file_get_contents($graphPhoLink);
-        //echo $jsonData; 
-        $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
-
-        // Facebook photos content
-        $fbPhotoData = $fbPhotoObj['data'];
-        $i++;
-        
-    }
-
-//end here 
-
 //array for storing urls of images in the album
 $images = array();
 $name = "";
