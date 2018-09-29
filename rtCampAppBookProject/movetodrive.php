@@ -42,14 +42,37 @@ $fbPhotoData = $fbPhotoObj['data'];
 //array for storing urls of images in the album
 $images = array();
 $name = "";
-foreach($fbPhotoData as $data){
+    while(isset($fbPhotoObj['paging']['next']))
+    {
+        foreach($fbPhotoData as $data){
+            //echo "1";
+            $imageData = end($data['images']);
+            //echo $imageData;
+            $imgSource = isset($imageData['source'])?$imageData['source']:'';
+            //echo $imgSource ."<br>";
+            
+            //extract only the url
+            //$imageUrl = substr($imgSource, 0, strpos($imgSource, "?"));
+            
+            //$images[] = $imageUrl;
+            $images[] = $imgSource;
+            $name = isset($data['name'])?$data['name']:'';
+            echo $name;
+        }
+        if($fbPhotoObj['paging']['next'])
+        {
 
-    $imageData = end($data['images']);
-    $imgSource = isset($imageData['source'])?$imageData['source']:'';
-    $images[] = $imgSource;
-    $name = isset($data['name'])?$data['name']:'';
-    
-}
+                $jsonData = file_get_contents($fbPhotoObj['paging']['next']);
+                //echo $jsonData; 
+                $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
+
+                // Facebook photos content
+                $fbPhotoData = $fbPhotoObj['data'];
+                //echo $fbPhotoData;
+                //var_dump($fbPhotoData);
+        }
+
+    }
 
 
 // Init the variables
