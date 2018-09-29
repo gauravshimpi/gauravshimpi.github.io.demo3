@@ -38,7 +38,7 @@ $fbPhotoData = $fbPhotoObj['data'];
 //array for storing urls of images in the album
 $images = array();
 $name = "";
-while(isset($fbPhotoObj['next']))
+while(isset($fbPhotoObj['paging']['next']))
 {
     foreach($fbPhotoData as $data){
         //echo "1";
@@ -58,7 +58,7 @@ while(isset($fbPhotoObj['next']))
     if($fbPhotoObj['next'])
     {
 
-            $jsonData = file_get_contents($fbPhotoObj['next']);
+            $jsonData = file_get_contents($fbPhotoObj['paging']['next']);
             //echo $jsonData; 
             $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
 
