@@ -55,7 +55,7 @@ while(isset($fbPhotoObj['paging']['next']))
         $name = isset($data['name'])?$data['name']:'';
         echo $name;
     }
-    if($fbPhotoObj['next'])
+    if($fbPhotoObj['paging']['next'])
     {
 
             $jsonData = file_get_contents($fbPhotoObj['paging']['next']);
