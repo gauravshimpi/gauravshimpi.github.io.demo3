@@ -77,7 +77,7 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //    <img src='{$imgSource}' class='size'  alt=''>
                     //</a>";
 
-                    echo "<a href='".$imgSource."'><img src='".$imgSource."' /></a>";
+                    echo "<a href='".$imgSource."'><img src='".$imgSource."' class='grid-box'/></a>";
                     //echo "<h3>{$name}</h3>";
                     //echo "</div>";
                 }
