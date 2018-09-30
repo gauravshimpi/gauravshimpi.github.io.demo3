@@ -23,7 +23,7 @@ if(isset($_POST['albumid']) && isset($_POST['albumname']) && isset($_REQUEST['us
 $access_token = $_SESSION['fb_access_token'];
 
 // Get photos of Facebook page album using Facebook Graph API URL 
-$graphPhoLink = "https://graph.facebook.com/v2.9/{$albumid}/photos?fields=source,images,name&access_token={$access_token}&limit=500";
+$graphPhoLink = "https://graph.facebook.com/v2.9/{$albumid}/photos?fields=source,images,name&access_token={$access_token}&limit=500&type=normal";
 //echo $graphPhoLink;
 
 $jsonData = file_get_contents($graphPhoLink);
