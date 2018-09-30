@@ -58,7 +58,7 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-    <div style="padding: 10px auto;font-family: sans-serif;font-size: 1.5rem; margin:3px auto;text-align: center;">Click anyone of the images images!</div>
+    <div style="padding: 10px auto;font-family: sans-serif;font-size: 1.5rem; margin:3px auto;text-align: center;">Click anyone of the images to start slide show!</div>
     <div id="lightgallery" style="margin: 0 auto;">
 
             <?php 
