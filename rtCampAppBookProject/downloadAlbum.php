@@ -67,15 +67,15 @@ while(true)
             //echo $fbPhotoData;
             //var_dump($fbPhotoData);
     }
-    if(!isset($fbPhotoObj['paging']['next']))
+    else
     {
 
-            $jsonData = file_get_contents($fbPhotoObj['data']);
+            //$jsonData = file_get_contents($fbPhotoObj['data']);
             //echo $jsonData; 
-            $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
+            //$fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
 
             // Facebook photos content
-            $fbPhotoData = $fbPhotoObj['data'];
+            //$fbPhotoData = $fbPhotoObj['data'];
 
             foreach($fbPhotoData as $data){
                 //echo "1";
