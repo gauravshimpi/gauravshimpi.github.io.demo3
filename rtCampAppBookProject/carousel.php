@@ -57,7 +57,7 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-    <div id="lightgallery" style="height: 400px; width: 400px;">
+    <div id="lightgallery" style="height: 400px; width: 400px; ">
             <?php 
                 foreach($fbPhotoData as $data)
                 {
@@ -72,7 +72,7 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //echo "<a class='carousel-item position' href='#!' style='top: -100px;'>
                     //    <img src='{$imgSource}' class='size'  alt=''>
                     //</a>";
-                    echo "<a href='".$imgSource."'><img src='".$imgSource."' /></a>";
+                    echo "<div style='height:100px;width:100px;float:left;'><a href='".$imgSource."'><img src='".$imgSource."' /></a><div>";
                         //echo "<h3>{$name}</h3>";
                     //echo "</div>";
                 }
@@ -81,12 +81,7 @@ $fbPhotoData = $fbPhotoObj['data'];
         
     <script src="assets/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="assets/materialize/js/materialize.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.carousel').carousel();
-        });
-        
-    </script>
+    
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#lightgallery").lightGallery(); 
