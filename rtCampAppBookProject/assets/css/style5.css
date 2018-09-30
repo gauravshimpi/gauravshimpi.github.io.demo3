@@ -18,7 +18,7 @@ body {
     grid-row-gap: 0px;
 }
 
-.grid-box img {
+a.img {
     width: 100%;
 }
 
