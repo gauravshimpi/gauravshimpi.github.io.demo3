@@ -102,6 +102,7 @@ $fbPhotoData = $fbPhotoObj['data'];
         <script src="lightGallery/dist/js/lg-fullscreen.min.js"></script>
         <script src="lightGallery/dist/js/lg-autoplay.min.js"></script>
         <script src="lightGallery/dist/js/lg-pager.min.js"></script>
+        <script src="lightGallery/dist/js/lg-zoom.min.js"></script>
 
 </body>
 </html>
