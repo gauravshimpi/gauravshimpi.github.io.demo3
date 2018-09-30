@@ -59,8 +59,8 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-    <div style="padding: 10px auto;font-family: sans-serif;text-align: center;">Click anyone of the images images!</div>
-    <div id="lightgallery" class="picture-grid">
+    <div style="padding: 10px auto;font-family: sans-serif;">Click anyone of the images images!</div>
+    <div id="lightgallery">
 
             <?php 
                 foreach($fbPhotoData as $data)
@@ -76,8 +76,7 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //echo "<a class='carousel-item position' href='#!' style='top: -100px;'>
                     //    <img src='{$imgSource}' class='size'  alt=''>
                     //</a>";
-
-                    echo "<a href='".$imgSource."'><img src='".$imgSource."' class='grid-box'/></a>";
+                    echo "<a href='".$imgSource."'><img src='".$imgSource."' style='width:300px;height:300px;float:left;'/></a>";
                     //echo "<h3>{$name}</h3>";
                     //echo "</div>";
                 }
