@@ -60,7 +60,7 @@ $fbPhotoData = $fbPhotoObj['data'];
         </div>    
     </div>
     <div style="padding: 10px auto;font-family: sans-serif;">Click anyone of the images images!</div>
-    <div id="lightgallery">
+    <div id="lightgallery" style="margin: 0 auto;">
 
             <?php 
                 foreach($fbPhotoData as $data)
