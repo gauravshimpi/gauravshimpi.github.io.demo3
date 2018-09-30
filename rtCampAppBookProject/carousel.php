@@ -80,8 +80,8 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //echo "</div>";
                 }
             ?>             
-    </div>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+        
     <script src="assets/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="assets/materialize/js/materialize.js"></script>
     
