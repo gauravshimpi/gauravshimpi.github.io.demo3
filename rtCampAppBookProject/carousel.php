@@ -58,7 +58,8 @@ $fbPhotoData = $fbPhotoObj['data'];
         </div>    
     </div>
     <div style="padding: 10px auto;font-family: sans-serif;">Click anyone of the images images!</div>
-    <div id="lightgallery" style="height: 400px; width: 400px;">
+    <div id="lightgallery">
+
             <?php 
                 foreach($fbPhotoData as $data)
                 {
@@ -74,7 +75,7 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //    <img src='{$imgSource}' class='size'  alt=''>
                     //</a>";
                     echo "<a href='".$imgSource."'><img src='".$imgSource."' /></a>";
-                        //echo "<h3>{$name}</h3>";
+                    //echo "<h3>{$name}</h3>";
                     //echo "</div>";
                 }
             ?>             
