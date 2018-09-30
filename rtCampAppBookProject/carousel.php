@@ -57,7 +57,7 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-    <div id="lightgallery">
+    <div id="lightgallery" style="height: 400px; width: 400px;">
             <?php 
                 foreach($fbPhotoData as $data)
                 {
