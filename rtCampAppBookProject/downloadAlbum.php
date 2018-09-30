@@ -38,7 +38,7 @@ $fbPhotoData = $fbPhotoObj['data'];
 //array for storing urls of images in the album
 $images = array();
 $name = "";
-do
+while(count($fbPhotoObj['data']) > 0)
 {
     foreach($fbPhotoData as $data){
         //echo "1";
@@ -68,7 +68,7 @@ do
             //var_dump($fbPhotoData);
     }
 
-}while(isset($fbPhotoObj['paging']['previous']));
+}
 
 //echo $name;
 
