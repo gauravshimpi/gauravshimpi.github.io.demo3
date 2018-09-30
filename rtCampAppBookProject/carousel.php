@@ -99,5 +99,8 @@ $fbPhotoData = $fbPhotoObj['data'];
         <!-- lightgallery plugins -->
         <script src="lightGallery/dist/js/lg-thumbnail.min.js"></script>
         <script src="lightGallery/dist/js/lg-fullscreen.min.js"></script>
+        <script src="lightGallery/dist/js/lg-autoplay.min.js"></script>
+        <script src="lightGallery/dist/js/lg-pager.min.js"></script>
+
 </body>
 </html>
