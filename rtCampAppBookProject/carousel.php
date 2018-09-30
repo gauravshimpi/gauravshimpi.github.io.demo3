@@ -47,7 +47,6 @@ $fbPhotoData = $fbPhotoObj['data'];
 
     </style>
         <link type="text/css" rel="stylesheet" href="lightGallery/dist/css/lightgallery.min.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style5.css">
 
 </head>
 <body style="background-color: #f5f5f5;overflow: hidden;">
@@ -59,7 +58,7 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-    <div style="padding: 10px auto;font-family: sans-serif;">Click anyone of the images images!</div>
+    <div style="padding: 10px auto;font-family: sans-serif;font-size: 1.5rem; margin:3px auto;text-align: center;">Click anyone of the images images!</div>
     <div id="lightgallery" style="margin: 0 auto;">
 
             <?php 
