@@ -76,7 +76,7 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //echo "<a class='carousel-item position' href='#!' style='top: -100px;'>
                     //    <img src='{$imgSource}' class='size'  alt=''>
                     //</a>";
-                    echo "<a href='".$imgSource."'><img src='".$imgSource."' style='width:300px;height:300px;float:left;'/></a>";
+                    echo "<a href='".$imgSource."'><img src='".$imgSource."' style='width:300px;height:300px;float:left;margin:5px;border:solid 2px grey;'/></a>";
                     //echo "<h3>{$name}</h3>";
                     //echo "</div>";
                 }
