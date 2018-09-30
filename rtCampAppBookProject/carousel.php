@@ -59,7 +59,7 @@ $fbPhotoData = $fbPhotoObj['data'];
             <b><h4 align="center" style="margin: 0;color: white"><?php echo $album_name; ?></h4></b>    
         </div>    
     </div>
-    <div style="padding: 10px auto;font-family: sans-serif;">Click anyone of the images images!</div>
+    <div style="padding: 10px auto;font-family: sans-serif;text-align: center;">Click anyone of the images images!</div>
     <div id="lightgallery" class="picture-grid">
 
             <?php 
@@ -77,7 +77,7 @@ $fbPhotoData = $fbPhotoObj['data'];
                     //    <img src='{$imgSource}' class='size'  alt=''>
                     //</a>";
 
-                    echo "<div class='grid-box'><a href='".$imgSource."'><img src='".$imgSource."' /></a></div>";
+                    echo "<a href='".$imgSource."'><img src='".$imgSource."' /></a>";
                     //echo "<h3>{$name}</h3>";
                     //echo "</div>";
                 }
