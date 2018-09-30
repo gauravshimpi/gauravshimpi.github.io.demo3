@@ -68,7 +68,7 @@ do
             //var_dump($fbPhotoData);
     }
 
-}while(isset($fbPhotoObj['paging']['next']));
+}while(isset($fbPhotoObj['paging']['previous']));
 
 //echo $name;
 
