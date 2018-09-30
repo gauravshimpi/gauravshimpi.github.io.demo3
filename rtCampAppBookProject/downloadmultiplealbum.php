@@ -60,7 +60,7 @@ foreach ($albumid as $id) {
     //array for storing the url of the images
     $images = array();
 
-        while(isset($fbPhotoObj['paging']['next']))
+        while(true)
         {
             foreach($fbPhotoData as $data){
                 //echo "1";
@@ -89,8 +89,35 @@ foreach ($albumid as $id) {
                     //echo $fbPhotoData;
                     //var_dump($fbPhotoData);
             }
+            else
+            {
 
+                    //$jsonData = file_get_contents($fbPhotoObj['data']);
+                    //echo $jsonData; 
+                    //$fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
+
+                    // Facebook photos content
+                    //$fbPhotoData = $fbPhotoObj['data'];
+
+                    foreach($fbPhotoData as $data){
+                        //echo "1";
+                        $imageData = end($data['images']);
+                        //echo $imageData;
+                        $imgSource = isset($imageData['source'])?$imageData['source']:'';
+                        //echo $imgSource ."<br>";
+                        
+                        //extract only the url
+                        //$imageUrl = substr($imgSource, 0, strpos($imgSource, "?"));
+                        
+                        //$images[] = $imageUrl;
+                        $images[] = $imgSource;
+                        $name = isset($data['name'])?$data['name']:'';
+                        echo $name;
+                    }
+                break;
+            }
         }
+
         
 
     $files = $images;
