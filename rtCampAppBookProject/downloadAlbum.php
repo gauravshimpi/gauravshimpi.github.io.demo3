@@ -69,6 +69,29 @@ while(true)
     }
     if(!isset($fbPhotoObj['paging']['next']))
     {
+
+            $jsonData = file_get_contents($fbPhotoObj['data']);
+            //echo $jsonData; 
+            $fbPhotoObj = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
+
+            // Facebook photos content
+            $fbPhotoData = $fbPhotoObj['data'];
+
+            foreach($fbPhotoData as $data){
+                //echo "1";
+                $imageData = end($data['images']);
+                //echo $imageData;
+                $imgSource = isset($imageData['source'])?$imageData['source']:'';
+                //echo $imgSource ."<br>";
+                
+                //extract only the url
+                //$imageUrl = substr($imgSource, 0, strpos($imgSource, "?"));
+                
+                //$images[] = $imageUrl;
+                $images[] = $imgSource;
+                $name = isset($data['name'])?$data['name']:'';
+                echo $name;
+            }
         break;
     }
 }
