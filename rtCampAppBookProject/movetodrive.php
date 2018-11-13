@@ -28,8 +28,9 @@ $album_name = $albumname;
 $access_token = $_SESSION['fb_access_token'];
 
 // Get photos of Facebook page album using Facebook Graph API URL 
-$graphPhoLink = "https://graph.facebook.com/v2.9/{$album_id}/photos?fields=source,images,name&access_token={$access_token}&limit=500";
+//$graphPhoLink = "https://graph.facebook.com/v2.9/{$album_id}/photos?fields=source,images,name&access_token={$access_token}&limit=500";
 //echo $graphPhoLink;
+$graphPhoLink = "https://graph.facebook.com/v2.9/{$albumid}/photos?fields=source,images,name&access_token={$access_token}&limit=500&type=normal";
 
 $jsonData = file_get_contents($graphPhoLink);
 
@@ -252,6 +253,11 @@ function insertFile($service, $description, $mimeType, $filename, $folderName, $
                 //return $createdFile;
             } catch (Exception $e) {
                 print "An error occurred: " . $e->getMessage();
+                ?>
+                <script type="text/javascript">
+                    altert(<?php print($e->getMessage()); ?>)
+                </script>
+                <?php
             }
         }
     }
